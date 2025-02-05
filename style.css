@@ -37,7 +37,7 @@ body, html {
     text-align: center;
     width: 90vw; /* Changed to a percentage for responsiveness */
     max-width: 600px; /* Limit maximum width for larger screens */
-    height: 55vh; /* Adjust height based on viewport */
+    height: 58vh; /* Adjust height based on viewport */
     align-items: center;
     padding: 1.5rem;
     justify-content: center;
@@ -160,6 +160,7 @@ body, html {
         font-size: 1rem;
     }
     .result {
+        margin-top: 0.5tirem;
         width: 90%;
         height:2rem ;
         font-size: 1rem;
