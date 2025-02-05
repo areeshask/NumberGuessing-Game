@@ -1,0 +1,196 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+body, html {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #FF6B01;
+}
+
+.background {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("https://construct-static.com/uploads/195552/eae7fd38-b155-4635-9d6b-f506422f0043/guess-the-number-small.jpg");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: opacity 1s ease-in-out;
+    background-attachment: fixed;
+}
+
+.main_div {
+    background-color: #353535;
+    display: none;
+    text-align: center;
+    width: 90vw; /* Changed to a percentage for responsiveness */
+    max-width: 600px; /* Limit maximum width for larger screens */
+    height: 55vh; /* Adjust height based on viewport */
+    align-items: center;
+    padding: 1.5rem;
+    justify-content: center;
+    color: #FFFFFF;
+    border: #FF6B01 0.4rem dashed;
+    border-radius: 0.9rem;
+    overflow: hidden;
+}
+
+.mainheading {
+    font-size: 2rem; /* Adjusted font size */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.instruction {
+    font-size: 1.8rem; /* Adjusted font size */
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    white-space: nowrap;
+    overflow: hidden;
+    animation: scroll 13s linear forwards;
+    color: #ff6b01ad;
+    font-weight: bold;
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(100%);
+    }
+    50% {
+        transform: translateX(-100%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+.input {
+    width: 80%; /* Make input field width responsive */
+    max-width: 400px; /* Limit maximum width */
+    height: 2.8rem;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 1.3rem;
+    text-align: center;
+    border: #FF6B01 0.15rem dashed;
+    border-radius: 0.4rem;
+    color: #353535;
+}
+
+.result {
+    width: 80%; /* Make result width responsive */
+    max-width: 400px; /* Limit maximum width */
+    height: 2.8rem;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 1.3rem;
+    border: #FF6B01 0.15rem dashed;
+    border-radius: 0.4rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin: auto;
+    background-color: #353535;
+    visibility: hidden;
+}
+
+.button-container {
+    position: relative;
+    display: inline-block;
+    width: 100%; /* Full width to prevent overlap */
+    max-width: 150px; /* Limit button width */
+    height: 48px;
+    
+}
+
+.button {
+    background-color: #FF6B01;
+    color: #FFFFFF;
+    padding: 10px 28px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.5rem;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+
+.restartButton {
+    visibility: hidden;
+    background-color: #FF6B01;
+    color: #FFFFFF;
+    padding: 10px 28px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.5rem;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+
+/* Media Queries for different screen sizes */
+
+/* For small screens (mobile) */
+@media only screen and (max-width: 600px) {
+    .mainheading {
+        font-size: 1.5rem; /* Smaller heading font */
+    }
+    .instruction {
+        margin-top: 1rem;
+        font-size: 1rem; /* Smaller instruction text */
+    }
+    .input {
+        height: 2rem;
+        width: 90%; /* Input field takes more width on mobile */
+        font-size: 1rem;
+    }
+    .result {
+        width: 90%;
+        height:2rem ;
+        font-size: 1rem;
+    }
+    .button {
+        font-size: 1rem; /* Adjust button size for mobile */
+        height: 85%;
+    }
+}
+
+/* For larger screens (tablet and desktop) */
+@media only screen and (min-width: 601px) { 
+    .mainheading {
+        font-size: 2.4rem; /* Adjusted font size for larger screens */
+    }
+    .instruction {
+        margin-top: 1rem;
+        font-size: 1.8rem; /* Larger font size */
+    }
+    .input {
+        margin-top: 1rem;
+        width: 80%; /* Adjust input field width */
+    }
+    .result {
+        width: 80%; 
+        margin-top: 1.5rem;
+    }
+    .button {
+        font-size: 1.5rem; /* Adjust button size for mobile */
+        height: 100%;
+    }
+}
+
+
