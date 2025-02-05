@@ -41,7 +41,7 @@ checkButton.onclick = () => {
     }
     else if(guess === randomNumber){
         result.style.visibility = "visible";
-        result.textContent = "Congratulations,You Won🎉👏🎁!";
+        result.textContent = "Congratulations,You Won🎉🥳!";
         result.style.color = "green";
         //disabled is a method of Javascript
         checkButton.style.visibility = "hidden";
